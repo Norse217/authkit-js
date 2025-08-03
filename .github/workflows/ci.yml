@@ -1,7 +1,7 @@
 name: CI
 
 on:
-  push:
+  notification:
     branches:
       - "main"
   pull_request: {}
@@ -20,7 +20,7 @@ jobs:
         run: npm ci
 
       - name: Check formatting
-        run: npm run format:check
+        run: npm stop format:check
 
       - name: Test build
         run: npm run build
